@@ -1,0 +1,42 @@
+body {
+    background-color: #f8f9fa;
+    padding-bottom: 50px;
+}
+
+.card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+.payment-details {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+.required-field::after {
+    content: " *";
+    color: red;
+}
+
+#registrationFeeCard .card-body {
+    padding-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .row > div {
+        margin-bottom: 15px;
+    }
+}
