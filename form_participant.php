@@ -38,9 +38,9 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center my-4">Presenter Registration</h1>
+        <h1 class="text-center my-4">Participant Registration</h1>
 
-        <form id="registrationForm" action="process_registration_presenter.php" method="post" enctype="multipart/form-data">
+        <form id="registrationForm" action="process_registration_participant.php" method="post" enctype="multipart/form-data">
             <div class="card mb-4">
                 <div class="card-header">
                     <h5>Personal Details</h5>
@@ -140,24 +140,43 @@
                 </div>
             </div>
 
-            <div class="card mb-4">
+            <div class="card mb-4" id="registrationFeeCard">
                 <div class="card-header">
-                    <h5>Paper Information</h5>
+                    <h5>Registration Fee</h5>
                 </div>
                 <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <label for="strand" class="form-label">Strand</label>
-                            <input type="text" class="form-control" id="strand" name="strand">
+                    <div id="nonMemberFee">
+                        <p>Registration Fee: $50</p>
+                        <div class="mb-3">
+                            <label for="registration_receipt" class="form-label">Upload Payment Receipt</label>
+                            <input type="file" class="form-control" id="registration_receipt" name="registration_receipt">
                         </div>
-                        <div class="col-md-4">
-                            <label for="paper_code" class="form-label">Code</label>
-                            <input type="text" class="form-control" id="paper_code" name="paper_code">
+                        <div class="payment-details">
+                            <p>Payment Details:</p>
+                            <div class="mb-2">
+                                <label class="form-label">Account Name:</label>
+                                <input type="text" class="form-control" id="reg_acc_name" name="reg_acc_name">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Account Number:</label>
+                                <input type="text" class="form-control" id="reg_acc_number" name="reg_acc_number">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Bank Name:</label>
+                                <input type="text" class="form-control" id="reg_bank_name" name="reg_bank_name">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">Bank Address:</label>
+                                <input type="text" class="form-control" id="reg_bank_address" name="reg_bank_address">
+                            </div>
+                            <div class="mb-2">
+                                <label class="form-label">SWIFT Code:</label>
+                                <input type="text" class="form-control" id="reg_bank_swift_code" name="reg_bank_swift_code">
+                            </div>
                         </div>
-                        <div class="col-md-4">
-                            <label for="paper_title" class="form-label">Paper Title</label>
-                            <input type="text" class="form-control" id="paper_title" name="paper_title">
-                        </div>
+                    </div>
+                    <div id="memberFee" style="display: none;">
+                        <p><b>No registration fee for members.</b></p>
                     </div>
                 </div>
             </div>
@@ -246,47 +265,6 @@
                             <label for="family_members" class="form-label">Family members joining as participant/presenter</label>
                             <textarea class="form-control" id="family_members" name="family_members" rows="2"></textarea>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card mb-4" id="registrationFeeCard">
-                <div class="card-header">
-                    <h5>Registration Fee</h5>
-                </div>
-                <div class="card-body">
-                    <div id="nonMemberFee">
-                        <p>Registration Fee: $50</p>
-                        <div class="mb-3">
-                            <label for="registration_receipt" class="form-label">Upload Payment Receipt</label>
-                            <input type="file" class="form-control" id="registration_receipt" name="registration_receipt">
-                        </div>
-                        <div class="payment-details">
-                            <p>Payment Details:</p>
-                            <div class="mb-2">
-                                <label class="form-label">Account Name:</label>
-                                <input type="text" class="form-control" id="reg_acc_name" name="reg_acc_name">
-                            </div>
-                            <div class="mb-2">
-                                <label class="form-label">Account Number:</label>
-                                <input type="text" class="form-control" id="reg_acc_number" name="reg_acc_number">
-                            </div>
-                            <div class="mb-2">
-                                <label class="form-label">Bank Name:</label>
-                                <input type="text" class="form-control" id="reg_bank_name" name="reg_bank_name">
-                            </div>
-                            <div class="mb-2">
-                                <label class="form-label">Bank Address:</label>
-                                <input type="text" class="form-control" id="reg_bank_address" name="reg_bank_address">
-                            </div>
-                            <div class="mb-2">
-                                <label class="form-label">SWIFT Code:</label>
-                                <input type="text" class="form-control" id="reg_bank_swift_code" name="reg_bank_swift_code">
-                            </div>
-                        </div>
-                    </div>
-                    <div id="memberFee" style="display: none;">
-                        <p>No registration fee for members.</p>
                     </div>
                 </div>
             </div>
